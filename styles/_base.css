@@ -28,21 +28,67 @@ button {
 .layout-grid {
   margin: auto;
   display: grid;
-  grid-template-rows: 100px 700px 100px;
+  grid-template-rows: [header]100px [main]700px [footer]100px;
   max-width: 600px;
   min-width: 380px;
   border: black 3px;
   border-style: solid;
+  border-radius: 1%;
   row-gap: 2px;
 }
 
 .content1 {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  position: relative;
   margin: auto;
   width: 400px;
   height: 250px;
   background-color: bisque;
   border: blanchedalmond 2px;
   border-style: ridge;
+  border-radius: 2%;
+  row-gap: 3px;
+}
+.bookmark-card {
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  top: -20px;
+  left: 325px;
+  font-size: 200%;
+  color: rgb(163, 24, 59);
+}
+.para_quest {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 80%;
+}
+
+.div_button {
+  display: flex;
+  justify-content: center;
+}
+.button_question {
+  height: 30px;
+  width: 175px;
+}
+.tab_area {
+  height: 33px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.tab_card {
+  border-radius: 10%;
+  text-align: center;
+  background-color: coral;
+  border: solid black 2px;
+  width: 80px;
 }
 
 .nav-grid {
@@ -64,11 +110,17 @@ button {
 
 .main-box {
   display: grid;
+  row-gap: 50px;
+  overflow-y: scroll;
+  /*contant can flow in box if content size more than box*/
   background-color: yellowgreen;
   height: 100%;
 }
 
 .footer-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   background-color: burlywood;
   height: 100%;
 }
