@@ -37,12 +37,19 @@ button {
   row-gap: 2px;
 }
 
+.name_profile {
+  position: absolute;
+  top: 55px;
+  left: 175px;
+  padding-left: 200px;
+}
 .main-grid {
   display: grid;
   grid-template-rows: auto auto auto auto;
 }
 
 .profile_person {
+  position: relative;
   grid: flex;
   background-color: yellowgreen;
   flex-direction: row;
