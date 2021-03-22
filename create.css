@@ -1,0 +1,159 @@
+
+/* General*/
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    font-size: 112.5%;
+    line-height: 1.5;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    line-height: 1.3;
+    margin: 0;
+  }
+  
+  input,
+  button {
+    font-size: 1em;
+  }
+  
+  /* Grid */
+  
+  .layout-grid {
+    margin: auto;
+    display: grid;
+    grid-template-rows: [header]100px [main]700px [footer]100px;
+    max-width: 600px;
+    min-width: 380px;
+    border: black 3px;
+    border-style: solid;
+    border-radius: 1%;
+    row-gap: 2px;
+  }
+  
+  .main-grid {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+  }
+  
+  /* alphabetical order*/
+  
+  .div_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+  }
+  .footer-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: burlywood;
+    height: 100%;
+  }
+  .icon1 {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    background-color: yellow;
+    color: grey;
+    margin-left: 45px;
+    border: white 3px;
+    border-style: outset;
+    text-align: center;
+    font-size: 300%;
+    padding-top: 8px;
+    margin-top: 5px;
+  }
+
+  
+  .nav-para {
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 25px;
+    font-size: 200%;
+  }
+  .nav-box {
+    background-color: khaki;
+    height: 100%;
+  }
+  
+  .create-question {
+    grid: flex;
+    background-color: yellowgreen;
+    flex-direction: row;
+    height: 175px;
+  }
+  .answer-create {
+    grid: flex;
+    flex-direction: row;
+    background-color: orange;
+    height: 175px;
+  }
+  .profile_logout {
+    grid: flex;
+    flex-direction: row;
+    background-color: salmon;
+    height: 45px;
+  }
+ .create-tab {
+    grid: flex;
+    flex-direction: row;
+    background-color:slategrey;
+    height: 175px;
+  }
+ 
+  .quest-input
+  {
+   padding-left: 25%;
+      
+    }
+  .answer-input{
+    padding-left: 25%;
+      
+  }
+
+  .tab-input
+  {
+    padding-left: 25%;
+  }
+  
+.submit-button
+
+{
+  margin-left: 28%;
+  
+  text-align: center;
+
+}
+
+  .button1 {
+      display: inline-block;
+      padding:8px 20px;
+      border:1px solid cornsilk;
+      margin:0 0.3em 0.3em 0;
+      border-radius:5%;
+      box-sizing: border-box;
+      text-decoration:none;
+      font-family:sans-serif;
+      font-weight:300;
+      color:cornsilk;
+      text-align:center;
+      transition: all 0.5s;
+      }
+      .button1:hover{
+      border:2px solid cornsilk;
+      color:#000000;
+      background-color:#FFFFFF;
+      opacity: 65%;
+      }
+      @media all and (max-width:30em){
+       .button1{
+      display:block;
+      margin:0.4em auto;
+       }
+      } 

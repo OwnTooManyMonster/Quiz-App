@@ -1,3 +1,5 @@
+
+/* General*/
 * {
   box-sizing: border-box;
 }
@@ -19,12 +21,9 @@ input,
 button {
   font-size: 1em;
 }
-.nav-para {
-  text-align: center;
-  font-weight: bolder;
-  padding-top: 25px;
-  font-size: 200%;
-}
+
+/* Grid */
+
 .layout-grid {
   margin: auto;
   display: grid;
@@ -37,15 +36,55 @@ button {
   row-gap: 2px;
 }
 
+.main-grid {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+}
+
+/* alphabetical order*/
+
+.div_button {
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+}
+.footer-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: burlywood;
+  height: 100%;
+}
+.icon1 {
+  display: inline-block;
+  width: 85px;
+  height: 85px;
+  background-color: yellow;
+  color: grey;
+  margin-left: 45px;
+  border: white 3px;
+  border-style: outset;
+  text-align: center;
+  font-size: 300%;
+  padding-top: 8px;
+  margin-top: 5px;
+}
 .name_profile {
   position: absolute;
   top: 55px;
   left: 175px;
   padding-left: 200px;
 }
-.main-grid {
-  display: grid;
-  grid-template-rows: auto auto auto auto;
+
+.nav-para {
+  text-align: center;
+  font-weight: bolder;
+  padding-top: 25px;
+  font-size: 200%;
+}
+.nav-box {
+  background-color: khaki;
+  height: 100%;
 }
 
 .profile_person {
@@ -76,34 +115,12 @@ button {
   background-color: salmon;
   height: 175px;
 }
-
-.nav-box {
-  background-color: khaki;
-  height: 100%;
+.profile_pic {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
 }
 
-.footer-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  background-color: burlywood;
-  height: 100%;
-}
-
-.icon1 {
-  display: inline-block;
-  width: 85px;
-  height: 85px;
-  background-color: yellow;
-  color: grey;
-  margin-left: 45px;
-  border: white 3px;
-  border-style: outset;
-  text-align: center;
-  font-size: 300%;
-  padding-top: 8px;
-  margin-top: 5px;
-}
 .tab_area {
   margin-top: 75px;
   height: 33px;
@@ -120,17 +137,29 @@ button {
   width: 80px;
 }
 
-.div_button {
-  display: flex;
-  justify-content: center;
-}
-
-.profile_pic {
-  width: 175px;
-  height: 175px;
-  border-radius: 50%;
-}
-
-.div_button {
-  margin-top: 75px;
-}
+.button1{
+    display: inline-block;
+    padding:8px 20px;
+    border:1px solid cornsilk;
+    margin:0 0.3em 0.3em 0;
+    border-radius:5%;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:sans-serif;
+    font-weight:300;
+    color:cornsilk;
+    text-align:center;
+    transition: all 0.5s;
+    }
+    .button1:hover{
+    border:2px solid cornsilk;
+    color:#000000;
+    background-color:#FFFFFF;
+    opacity: 65%;
+    }
+    @media all and (max-width:30em){
+     .button1{
+    display:block;
+    margin:0.4em auto;
+     }
+    } 
