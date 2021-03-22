@@ -10,21 +10,32 @@ for (let i = 0; i < bookmark_cards.length; i++) {
   })
 }
 
-let button = document.querySelectorAll('button')
-let para_quest = document.querySelectorAll('.para_quest')
-let div_answer = document.querySelectorAll('.div_answer')
-let para_answer = document.createElement('h2')
+const button = document.querySelectorAll('button')
+const para_quest = document.querySelectorAll('.para_quest')
+const div_answer = document.querySelectorAll('.div_answer')
+const para_answer = document.createElement('p')
+
+const div_quest = document.querySelectorAll('.div_quest')
+
 para_answer.classList.add('para_answer')
 para_answer.textContent = 'Hier könnte Ihre Werbung stehen!'
 
 for (let i = 0; i < button.length; i++) {
   // problem 1  clicking on button second erase all para quest
   button[i].addEventListener('click', () => {
-    //Where to index ? Solution QuerrySelctorAll i for all remove
+    if (button[i].textContent == 'Show Answer') {
+      para_quest[i].remove()
+      button[i].textContent = 'Hide Answer'
+      div_answer[i].append(para_answer)
+    } else {
+      button[i].textContent = 'Show Answer'
+      const para_quest = document.createElement('p')
+      para_quest.textContent =
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore aspernatur necessitatibus repellendus possimus voluptate adipisci nobis! Reprehenderit id recusandae laudantium consequatur! Animi suscipit sapiente possimus eos pariatur optio fugiat. '
+      div_quest[i].append(para_quest)
 
-    para_quest[i].remove()
-    button[i].textContent = 'Hide Answer'
-    div_answer[i].append(para_answer)
+      //Where to index ? Solution QuerrySelctorAll i for all remove
+    }
     // [i] wird benötigt um die Verankerung auf das oben geschaffene Array herzustellen
   })
 }
