@@ -30,8 +30,7 @@ for (let i = 0; i < button.length; i++) {
     } else {
       button[i].textContent = 'Show Answer'
       const para_quest = document.createElement('p')
-      para_quest.textContent =
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore aspernatur necessitatibus repellendus possimus voluptate adipisci nobis! Reprehenderit id recusandae laudantium consequatur! Animi suscipit sapiente possimus eos pariatur optio fugiat. '
+      para_quest.textContent = ' Lorem ipsum dolor sit amet'
       div_quest[i].append(para_quest)
 
       //Where to index ? Solution QuerrySelctorAll i for all remove
