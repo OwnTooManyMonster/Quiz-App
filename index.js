@@ -10,7 +10,7 @@ for (let i = 0; i < bookmark_cards.length; i++) {
   })
 }
 
-const button = document.querySelectorAll('button')
+const button = document.querySelectorAll('.button1')
 const para_quest = document.querySelectorAll('.para_quest')
 const div_answer = document.querySelectorAll('.div_answer')
 const para_answer = document.createElement('p')
@@ -32,30 +32,6 @@ for (let i = 0; i < button.length; i++) {
       const para_quest = document.createElement('p')
       para_quest.textContent = ' Lorem ipsum dolor sit amet'
       div_quest[i].append(para_quest)
-
-      //Where to index ? Solution QuerrySelctorAll i for all remove
     }
-    // [i] wird benötigt um die Verankerung auf das oben geschaffene Array herzustellen
   })
 }
-
-//const namesList = ['David', 'Marwin', 'Martin']
-
-//namesList.forEach(name => console.log(name))
-
-/*
-
-namesList.forEach(logName)
-
-function logName(name) {
-    console.log(name)
-}
-
-/*
- let div_answer = document.querySelector('div_answer')
-    let para_answer = document.createElement('para_answer')
-    div_answer.insertBefore()
-    targetElement.insertAdjacentElement(position, element);
-    para_answer.textContent = 'Hier könnte Ihre Werbung stehen!'
-    div_answer.append(div_answer)
-    div_answer.classList.add('para_answer'  */

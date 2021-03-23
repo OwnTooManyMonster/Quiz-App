@@ -1,9 +1,9 @@
-import { data } from "./src/lib/db.js";
-import { createCard } from "./src/lib/card.js";
+import { data } from '../src/lib/db.js'
+import { createCard } from '../src/lib/card.js'
 
-const content = document.querySelector(".content");
+const mainBox = document.querySelector('.mainBox')
 
 for (let i = 0; i < data.length; i++) {
-  const cardSection = createCard(data[i]);
-  content.append(cardSection);
+  const cardSection = createCard(data[i])
+  mainBox.append(cardSection)
 }
