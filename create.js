@@ -1,7 +1,4 @@
-const data = []
-let inputQuest
-let inputAnswer
-let inputTag
+import { pushSection } from './src/lib/db.js'
 
 const form = document.querySelector('form')
 const button = document.querySelector('button')
@@ -9,18 +6,27 @@ const button = document.querySelector('button')
 form.addEventListener('submit', event => {
   event.preventDefault()
 
-  inputQuest = form['quest']
-  inputAnswer = form['answer']
-  inputTag = form['tag']
+  const inputQuest = form['quest']
+  const inputAnswer = form['answer']
+  const inputTag = form['tag']
 
-  let QuestData = {
-    quest: inputQuest.value,
-    answer: inputAnswer.value,
-    tag: inputTag.value,
-  }
+  const quest = inputQuest.value
+  const answer = inputAnswer.value
 
-  data.push(QuestData)
+  const itemsArray = itemsStringToArray(inputTag.value)
 
-  console.log(data)
+  pushSection({
+    quest: quest,
+    answer: answer,
+    tag: itemsArray,
+  })
+
   form.reset()
+  alert('Section created!')
 })
+
+function itemsStringToArray(itemsString) {
+  const itemsArray = itemsString.split(',')
+
+  return itemsArray
+}
