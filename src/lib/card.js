@@ -1,47 +1,76 @@
 export function createCard(card) {
-  const cardSection = document.createElement("div");
-  cardSection.classList.add("cardSection");
+  const cardSection = document.createElement('div')
+  cardSection.classList.add('cardSection')
 
-  const bookmark_card = document.createElement("div");
-  bookmark_card.classList.add("bookmark-card");
-  cardSection.append(bookmark_card);
+  const bookmark_card = document.createElement('div')
+  bookmark_card.classList.add('bookmark-card')
+  cardSection.append(bookmark_card)
 
-  const icon_card = document.createElement("i");
-  icon_card.classList.add("bookmarkicon1", "lni", "lni-bookmark");
-  bookmark_card.append(icon_card);
+  const icon_card = document.createElement('i')
+  icon_card.classList.add('bookmarkicon1', 'lni', 'lni-bookmark')
+  bookmark_card.append(icon_card)
 
-  const h2Title = document.createElement("h2");
-  h2Title.textContent = card.title;
-  cardSection.append(h2Title);
+  const h2Title = document.createElement('h2')
+  h2Title.textContent = 'quest'
+  cardSection.append(h2Title)
 
-  const div_quest = document.createElement("div");
-  div_quest.classList.add("div_quest");
-  cardSection.append(div_quest);
+  const div_quest = document.createElement('div')
+  div_quest.classList.add('div_quest')
+  cardSection.append(div_quest)
 
-  const para_quest = document.createElement("p");
-  para_quest.classList.add(".para_quest");
-  para_quest.textContent = card.question;
-  div_quest.append(para_quest);
+  const para_quest = document.createElement('p')
+  para_quest.classList.add('.para_quest')
+  para_quest.textContent = 'BLA'
+  div_quest.append(para_quest)
 
-  const div_button = document.createElement("div");
-  div_button.classList.add("div_button");
-  cardSection.append(div_button);
+  const div_button = document.createElement('div')
+  div_button.classList.add('div_button')
+  cardSection.append(div_button)
 
-  const button = document.createElement("button");
-  button.classList.add("button1");
-  button.textContent = "Show Answer";
-  div_button.append(button);
+  const button = document.createElement('button')
+  button.classList.add('button1')
+  button.textContent = 'Show Answer'
+  div_button.append(button)
 
-  const div_answer = document.createElement("div");
-  div_answer.classList.add("div_answer");
-  cardSection.append(div_answer);
+  const div_answer = document.createElement('div')
+  div_answer.classList.add('div_answer')
+  cardSection.append(div_answer)
 
-  const tab_area = document.createElement("div");
-  tab_area.classList.add("tab_area");
-  tab_area.textContent = card.tags;
-  cardSection.append(tab_area);
+  const para_answer = document.createElement('p')
+  para_answer.classList.add('para_answer')
+  para_answer.textContent = 'Bla'
+  div_answer.append(para_answer)
 
-  return cardSection;
+  const tab_area = document.createElement('div')
+  tab_area.classList.add('tab_area')
+  tab_area.textContent = 'damn'
+  cardSection.append(tab_area)
+
+  let bookmark_cards = document.querySelectorAll('.bookmark-card')
+
+  for (let i = 0; i < bookmark_cards.length; i++) {
+    bookmark_cards[i].addEventListener('click', () => {
+      bookmark_cards[i].classList.toggle('bookmark-card')
+      bookmark_cards[i].classList.toggle('bookmark-card2')
+    })
+  }
+
+  for (let i = 0; i < button.length; i++) {
+    // problem 1  clicking on button second erase all para quest
+    button[i].addEventListener('click', () => {
+      if (button[i].textContent == 'Show Answer') {
+        button[i].textContent = 'Hide Answer'
+      } else {
+        button[i].textContent = 'Show Answer'
+        const para_quest = document.createElement('p')
+        para_quest.textContent = ' Lorem ipsum dolor sit amet'
+        div_quest[i].append(para_quest)
+      }
+    })
+  }
+
+  return cardSection
+
   /*cardSection.append(h2Title);
 
   const ulElement = document.createElement("ul");
