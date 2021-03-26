@@ -1,4 +1,4 @@
-export function createCard(card) {
+export function createCard(card, index) {
   const cardSection = document.createElement('div')
   cardSection.classList.add('cardSection')
 
@@ -11,7 +11,7 @@ export function createCard(card) {
   bookmark_card.append(icon_card)
 
   const h2Title = document.createElement('h2')
-  h2Title.textContent = 'quest'
+  h2Title.textContent = `Question ${index}`
   cardSection.append(h2Title)
 
   const div_quest = document.createElement('div')
@@ -20,7 +20,7 @@ export function createCard(card) {
 
   const para_quest = document.createElement('p')
   para_quest.classList.add('.para_quest')
-  para_quest.textContent = 'BLA'
+  para_quest.textContent = card.quest
   div_quest.append(para_quest)
 
   const div_button = document.createElement('div')
@@ -38,22 +38,18 @@ export function createCard(card) {
 
   const para_answer = document.createElement('p')
   para_answer.classList.add('para_answer')
-  para_answer.textContent = 'Bla'
+  para_answer.textContent = card.answer
   div_answer.append(para_answer)
 
   const tab_area = document.createElement('div')
   tab_area.classList.add('tab_area')
-  tab_area.textContent = 'damn'
+  tab_area.textContent = card.tag
   cardSection.append(tab_area)
 
-  let bookmark_cards = document.querySelectorAll('.bookmark-card')
-
-  for (let i = 0; i < bookmark_cards.length; i++) {
-    bookmark_cards[i].addEventListener('click', () => {
-      bookmark_cards[i].classList.toggle('bookmark-card')
-      bookmark_cards[i].classList.toggle('bookmark-card2')
-    })
-  }
+  bookmark_card.addEventListener('click', () => {
+    bookmark_card.classList.toggle('bookmark-card')
+    bookmark_card.classList.toggle('bookmark-card2')
+  })
 
   for (let i = 0; i < button.length; i++) {
     // problem 1  clicking on button second erase all para quest

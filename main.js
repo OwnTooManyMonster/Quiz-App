@@ -5,6 +5,6 @@ const mainBox = document.querySelector('.mainBox')
 const data = getSections()
 
 for (let i = 0; i < data.length; i++) {
-  const cardSection = createCard(data[i])
+  const cardSection = createCard(data[i], i + 1)
   mainBox.append(cardSection)
 }
